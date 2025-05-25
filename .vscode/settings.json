@@ -1,0 +1,4 @@
+{
+  // Tell the Continue extension exactly where your config lives
+  "continue.configPath": "\${workspaceFolder}/.continue/config.yaml"
+}

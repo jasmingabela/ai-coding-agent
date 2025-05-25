@@ -1,0 +1,21 @@
+{
+  "selectedModelsByProfileId": {
+    "local": {
+      "chat": "DeepSeek-R1-Free",
+      "edit": null,
+      "apply": null,
+      "embed": "Transformers.js (Built-In)",
+      "autocomplete": null,
+      "rerank": null,
+      "summarize": null
+    }
+  },
+  "lastSelectedProfileForWorkspace": {
+    "file:///workspaces/ai-coding-agent:::personal": null
+  },
+  "lastSelectedOrgIdForWorkspace": {
+    "file:///workspaces/ai-coding-agent": "personal"
+  },
+  "isSupportedLanceDbCpuTargetForLinux": true,
+  "showConfigUpdateToast": false
+}

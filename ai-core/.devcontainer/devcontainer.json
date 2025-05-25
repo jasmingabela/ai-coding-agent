@@ -1,0 +1,11 @@
+{
+  "name": "AI Coding Agent",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Continue.continue"]
+    }
+  },
+  "remoteEnv": {
+    "OPENROUTER_API_KEY": "${localEnv:OPENROUTER_API_KEY}"
+  }
+}

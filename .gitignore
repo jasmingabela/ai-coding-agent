@@ -1,0 +1,8 @@
+
+# SECURE SENSITIVE FILES (Added by Continue Agent)
+.env
+*.yaml
+*.yml
+!.continue/config.yaml  # Allow Continue base config if needed
+.DS_Store
+node_modules/
