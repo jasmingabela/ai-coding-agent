@@ -10,6 +10,16 @@ app.get('/', (req, res) => {
   res.send({ status: 'ok' });
 });
 
+app.get('/models', (req, res) => {
+  res.json([
+    {
+      title: "DeepSeek-R1-Free (via MCP)",
+      provider: "mcp",
+      model: "deepseek/deepseek-r1:free"
+    }
+  ]);
+});
+
 const PORT = process.env.PORT || 3001;
 const SERPER_API_KEY = process.env.SERPER_API_KEY;
 
@@ -19,6 +29,8 @@ app.post('/search', async (req, res) => {
   if (!query) {
     return res.status(400).json({ error: 'Missing query parameter `q`' });
   }
+
+  console.log('Got query:', query);  // <-- Added
 
   try {
     const response = await fetch('https://google.serper.dev/search', {
@@ -33,6 +45,7 @@ app.post('/search', async (req, res) => {
     const data = await response.json();
 
     if (!response.ok) {
+      console.error('Serper error:', data);  // <-- Added
       return res.status(response.status).json({ error: data.message || 'Serper error' });
     }
 
@@ -42,6 +55,7 @@ app.post('/search', async (req, res) => {
 
     res.json({ result: results });
   } catch (err) {
+    console.error('Fetch failed:', err); // <-- Added
     res.status(500).json({ error: err.message });
   }
 });

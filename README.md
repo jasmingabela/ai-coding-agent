@@ -10,8 +10,12 @@ models:
   - name: DeepSeek-R1-Free
     provider: openrouter
     model: deepseek/deepseek-r1:free
+    apiKey: "${OPENROUTER_API_KEY}"
     stream: false
 ```
+**API Key Setup**:
+- Set your OpenRouter API key as an environment variable named `OPENROUTER_API_KEY`.
+- Never hardcode API keys in config.yaml for security reasons.
 **Next Development Priorities**:
 1. SERPER API integration 🌐
 2. MCP Server foundation 🔧
